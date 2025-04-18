@@ -1,8 +1,11 @@
-let text = document.getElementById("text")
 
-async function Convert() {
-    const reponse = await fetch();
-    const data = await reponse.json();
-    console.log(data);
+let convercurr = document.getElementById('convert-curr')
+let convertcurrency = document.getElementById("covert-currency")
+
+
+ async function  covertcurr(){
+    
+    let apirl =  await fetch ("https://v6.exchangerate-api.com/v6/fc8851abe3c70b15174a6911/latest/USD")
+    console.log(apirl)
     
 }

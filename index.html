@@ -25,19 +25,10 @@
           <input type="number" value="10" class="w-full bg-transparent text-white text-5xl font-light outline-none border-b border-white placeholder-white" />
         </div>
         <div class="mt-6">
-          <select class="w-full bg-white bg-opacity-20 text-black text-sm focus:outline-none p-2 rounded shadow-md overflow-auto h-10">
-            <option>USD - United States Dollar</option>
-            <option>EUR - Euro</option>
-            <option>GBP - British Pound</option>
-            <option>JPY - Japanese Yen</option>
-            <option>AUD - Australian Dollar</option>
-            <option>CAD - Canadian Dollar</option>
-            <option>CHF - Swiss Franc</option>
-            <option>CNY - Chinese Yuan</option>
-          </select>
+          <input id="Currency" placeholder="your Currency">
         </div>
         <div class="mt-6">
-          <button class="w-full bg-white text-black-500 font-semibold py-2 rounded shadow hover:bg-rose-100 transition">
+          <button class="w-full bg-white text-black-500 font-semibold py-2 rounded shadow hover:bg-rose-100 transition " id="convert-curr" onclick="covertcurr()">
             Convert
           </button>
         </div>
@@ -50,8 +41,8 @@
         <div class="text-5xl text-rose-400 font-light">667.8</div>
         <div class="border-b border-rose-200 mt-1 w-24"></div>
         <div class="mt-4 text-rose-400 text-sm font-medium">
-          <select class="w-full bg-white bg-opacity-60 text-rose-500 focus:outline-none p-2 rounded shadow-sm overflow-auto h-10">
-            <option>INR - Indian Rupee</option>
+          <select class="w-full bg-white bg-opacity-60 text-rose-500 focus:outline-none p-2 rounded shadow-sm overflow-auto h-10 " id="convert-currency">
+            <option >INR - Indian Rupee</option>
             <option>USD - United States Dollar</option>
             <option>EUR - Euro</option>
             <option>GBP - British Pound</option>
