@@ -1,60 +1,62 @@
-<!DOCTYPE html>
+
+
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Currency Converter</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <title>Exchange Rate UI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200 p-4 flex flex-col">
+<body class="bg-black text-white">
 
+  <div class="container mt-3 text-end">
+    <button class="btn text-white fw-bold px-4 py-2" style="background-color: #e91e63; border-radius: 25px; "  id="getexchangerate" onclick=" exchangerate()" >Get Exchange Rates</button>
+  </div>
 
-    <nav class="w-full max-w-6xl bg-white bg-opacity-60 backdrop-blur-md shadow-md rounded-xl px-6 py-4 mb-6 mx-auto">
-        <div class="flex items-center space-x-4">
-          <img src="cc.jpeg" alt="Logo" class="h-10 w-10 object-contain rounded-full" />
-          <span class="text-2xl font-bold text-rose-500 tracking-wide">Currency Converter</span>
-        </div>
-      </nav>
+  <div class="container mt-4 p-4 rounded" style="background-color: #000; box-shadow: 0 0 4px rgba(255,255,255,0.3); max-width: 900px;">
+    <div class="text-center mb-3">
+      <h1>Convert currency with in seconds</h1>
+      <p class="text-secondary small">Banks markup the exchange rate when you spend or transfer money abroad. We don’t.</p>
+    </div>
 
-      <div class="flex-1 flex items-center justify-center">
-        <div class="flex flex-col md:flex-row w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
-      <div class="flex-1 bg-gradient-to-b from-rose-400 to-rose-300 p-6">
-        <div class="text-xs text-white opacity-70">Jun 6, 2016</div>
-        <div class="text-white font-semibold text-xl mt-1">Currency</div>
-        <div class="mt-6">
-          <input type="number" value="10" class="w-full bg-transparent text-white text-5xl font-light outline-none border-b border-white placeholder-white" />
-        </div>
-        <div class="mt-6">
-          <input id="Currency" placeholder="your Currency">
-        </div>
-        <div class="mt-6">
-          <button class="w-full bg-white text-black-500 font-semibold py-2 rounded shadow hover:bg-rose-100 transition " id="convert-curr" onclick="covertcurr()">
-            Convert
-          </button>
+    <div class="row text-center mb-4 shadow-lg"> 
+      <div class="col-md-6">
+        <p>From</p>
+        <div class="input-group">
+          <select class="form-select" style="max-width: 150px; background-color: #111; color: white; border: none;" id="currencydrop">
+            
+          </select>
+          <input type="number" class="form-control form-control-lg text-center" placeholder="Enter amount" style="background-color: #111; color: white; border: none;"  id="inputValue">
         </div>
       </div>
-
-
-
-      
-      <div class="flex-1 bg-white p-6">
-        <div class="text-5xl text-rose-400 font-light">667.8</div>
-        <div class="border-b border-rose-200 mt-1 w-24"></div>
-        <div class="mt-4 text-rose-400 text-sm font-medium">
-          <select class="w-full bg-white bg-opacity-60 text-rose-500 focus:outline-none p-2 rounded shadow-sm overflow-auto h-10 " id="convert-currency">
-            <option >INR - Indian Rupee</option>
-            <option>USD - United States Dollar</option>
-            <option>EUR - Euro</option>
-            <option>GBP - British Pound</option>
-            <option>JPY - Japanese Yen</option>
-            <option>AUD - Australian Dollar</option>
-            <option>CAD - Canadian Dollar</option>
-            <option>CHF - Swiss Franc</option>
+      <div class="col-md-6">
+        <p>To</p>
+        <div class="input-group">
+          <select class="form-select" style="max-width: 150px; background-color: #111; color: white; border: none;"  id="currencyTo">
+           
           </select>
+          <input type="number" class="form-control form-control-lg text-center" placeholder=""  style="background-color: #111; color: white; border: none;"  id="outputValue">
         </div>
       </div>
     </div>
+
+    <div class="row text-center">
+      <div class="col-md-6">
+        <p>Current rate</p>
+        <div>1.0985</div>
+      </div>
+      <div class="col-md-6">
+        <p>Today's change</p>
+        <div class="fw-bold" style="color: #2ecc71;">▲ 0.0010 (0.09%)</div>
+      </div>
+    </div>
+    <div class="mt-4 text-center">
+      <button class="btn btn-light" style="width: 300px; height: 50px;" id="convertBtn">Convert currency</button>
+    </div>
   </div>
-    <script src="app.js"></script>
+  <!-- <img src="coins.jpg" style="margin-left: 390px; width: 500px; height: 500px; margin-top: 45px;" alt="Currency Icons" class="rotate-medium"> -->
+  <script src="app.js"></script>
 </body>
 </html>
+
